@@ -1,0 +1,41 @@
+﻿<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title>GitHub | SinSiXX</title>
+	<style type="text/css" media="screen">
+		body
+		{
+		background-color: #000;
+		font: 5px Monospace;
+		color: #fff;
+		overflow: hidden
+		}
+	</style>
+</head>
+<body>
+	<pre id="hello"></pre>
+	<script type="text/javascript">
+		o  = 0;
+		setInterval(function(){
+		o+=20;
+		var width = 500;
+		var txt = '';
+		for(var i = 0; i < 250; i++){ //x axis
+		var input = ((i+o))/120;
+		  var v = Math.round(Math.sin(input)*((width/2)-6))+(width/2);
+		  for(var x = 0; x < width; x++){ //y axis
+		    if(x == v){
+		      txt += '.'
+		    }else{
+		      txt += ' '
+		    }
+		  }
+		  txt += '\n'
+		}
+		if (document.getElementById('hello')) {
+		  document.getElementById('hello').innerHTML = txt;
+		}
+		},100)
+	</script>
+</boby>
+</html>
